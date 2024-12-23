@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studi Kasus Positioning</title>
+    <link rel="stylesheet" href="">
+    <style>
+      body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    position: fixed; /* Header tetap di bagian atas */
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    z-index: 1000; /* Pastikan header di atas elemen lainnya */
+}
+
+.container {
+    display: flex; /* Menggunakan flexbox untuk mengatur layout */
+    margin-top: 50px; /* Memberikan ruang untuk header yang fixed */
+}
+
+.main-content {
+    position: relative; /* Konten utama menggunakan posisi relatif */
+    flex: 1; /* Mengambil ruang yang tersisa */
+    padding: 20px;
+}
+
+.sidebar {
+    position: absolute; /* Sidebar menggunakan posisi absolute */
+    top: 20px; /* Jarak dari atas konten utama */
+    right: 20px; /* Jarak dari kanan konten utama */
+    width: 200px;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.footer {
+    position: sticky; /* Footer menggunakan posisi sticky */
+    bottom: 0; /* Tetap di bawah viewport saat di-scroll */
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+    </style>
+</head>
+<body>
+    <header class="header">Header (Fixed)</header>
+    <div class="container">
+        <main class="main-content">
+            <h1>Konten Utama</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p>Scroll ke bawah untuk melihat efek sticky pada footer.</p>
+            <p style="height: 1500px;">(Konten panjang untuk demonstrasi scroll)</p>
+        </main>
+        <aside class="sidebar">Sidebar (Absolute)</aside>
+    </div>
+    <footer class="footer">Footer (Sticky)</footer>
+</body>
+</html>

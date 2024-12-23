@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box1 {
+    position: absolute; /* Harus diatur posisi */
+    z-index: 0; /* Box 1 di atas */
+    background-color: red;
+    width: 100px;
+    height: 100px;
+}
+
+.box2 {
+    position: absolute; /* Harus diatur posisi */
+    z-index: 1; /* Box 2 di bawah */
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+    left: 50px; /* Menggeser Box 2 ke kanan */
+}
+.box3 {
+    position: absolute; /* Harus diatur posisi */
+    z-index: 3; /* Box 2 di bawah */
+    background-color: rgb(112, 112, 134);
+    width: 100px;
+    height: 100px;
+    left: 100px; 
+}
+  </style>
+</head>
+<body>
+  <div class="box1">Box 1</div>
+<div class="box2">Box 2</div>
+<div class="box3">Box 3</div>
+</body>
+</html>

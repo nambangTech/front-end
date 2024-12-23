@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studi Kasus Sederhana Positioning</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    position: fixed; /* Header tetap di bagian atas */
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    z-index: 1000; /* Pastikan header di atas elemen lainnya */
+}
+
+.container {
+    padding-top: 50px; /* Memberikan ruang untuk header yang fixed */
+}
+
+.relative-box {
+    position: relative; /* Kotak ini menjadi referensi untuk posisi absolut */
+    width: 300px;
+    height: 200px;
+    background-color: lightblue;
+    margin: 20px auto; /* Mengatur margin agar kotak berada di tengah */
+    padding: 10px;
+    text-align: center;
+}
+
+.absolute-box {
+    position: absolute; /* Kotak ini akan diposisikan absolut */
+    top: 20px; /* Jarak dari atas kotak relatif */
+    left: 20px; /* Jarak dari kiri kotak relatif */
+    width: 100px;
+    height: 100px;
+    background-color: coral;
+    text-align: center;
+    line-height: 100px; /* Memusatkan teks secara vertikal */
+}
+    </style>
+</head>
+<body>
+    <header class="header">Header (Fixed)</header>
+    <div class="container">
+        <div class="relative-box">
+            Kotak Relatif
+            <div class="absolute-box">Kotak Absolut</div>
+        </div>
+        <p>Scroll ke bawah untuk melihat efek header yang tetap.</p>
+        <p style="height: 1200px;">(Konten panjang untuk demonstrasi scroll)</p>
+    </div>
+</body>
+</html>

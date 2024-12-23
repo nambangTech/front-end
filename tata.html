@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+    position: relative; /* Elemen ini menjadi referensi untuk elemen absolut */
+    width: 300px;
+    height: 300px;
+    background-color: lightgray;
+}
+
+.absolute-box {
+    position: absolute; /* Elemen ini diposisikan secara absolut */
+    top: 70px;         /* 20px dari tepi atas container */
+    left: 0px;       /* 30px dari tepi kiri container */
+    width: 100px;
+    height: 100px;
+    background-color: coral;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="absolute-box">Kotak Absolut</div>
+</div>
+</body>
+</html>

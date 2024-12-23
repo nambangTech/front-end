@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh Position Relative</title>
+    <style>
+        .container {
+            position: relative; /* Kotak ini menjadi referensi untuk elemen di dalamnya */
+            width: 300px;
+            height: 300px;
+            background-color: lightblue;
+            border: 2px solid blue;
+        }
+
+        .image {
+            position: relative; /* Gambar ini akan dipindahkan relatif terhadap posisinya yang normal */
+            top: 50px;         /* Geser gambar 50px ke bawah dari posisi normalnya */
+            left: 30px;        /* Geser gambar 30px ke kanan dari posisi normalnya */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="image" src="https://via.placeholder.com/100" alt="Gambar Placeholder">
+    </div>
+</body>
+</html>

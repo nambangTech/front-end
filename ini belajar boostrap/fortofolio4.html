@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my web</title>
+    <link rel="icon" type="image/png" href="melcin.png" sizes="16x16" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <style>
+       
+body {
+            margin: 0px;
+            font-family: Arial, sans-serif;
+            background-color: var(--warna-khusus);
+
+}
+:root{
+ --warna-utama: #333333;
+ --warna-huruf: #000000;
+ --warna-background: #ffffff;
+ --warna-khusus: #3C3D37;
+
+  
+}
+
+
+/* ini bagian navbar  */
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--warna-utama);
+    padding: 10px 20px;
+    margin-bottom: 0px;
+}
+
+
+.navbar .brand {
+    color: var(--warna-background);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .nav-links li {
+    display: inline;
+}
+
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    transition: background-color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+    background-color: #575757;
+    border-radius: 4px;
+}
+
+/* Media Query untuk layar kecil */
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        display: none; /* Sembunyikan nav-links secara default */
+        flex-direction: column; /* Mengubah arah menjadi kolom */
+        width: 100%; /* Mengatur lebar nav-links */
+        background-color: #e20f0f; /* Warna latar belakang untuk dropdown */
+        position: absolute; /* Mengatur posisi menjadi absolute */
+        top: 60px; /* Menempatkan di bawah navbar */
+        left: 0; /* Menempel di kiri */
+    }
+
+    .navbar .nav-links.active {
+        display: flex; /* Tampilkan nav-links ketika aktif */
+    }
+
+    .hamburger {
+        display: block; /* Tampilkan hamburger */
+        cursor: pointer; /* Ubah kursor menjadi pointer */
+    }
+
+    .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        background-color: white; /* Warna bar hamburger */
+    }
+}
+/* ini bagian home */
+#particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        .container {
+            width: 100vw;
+            height: 500px;
+            position: relative;
+            text-align: center;
+            z-index: 2; /* Agar konten tetap di atas particles */
+            color: #000000;
+            background-color: gray;
+            
+            
+        }
+        h1 {
+            padding-top: 20px;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        p {
+
+            font-size: 1.2em;
+            color: #ddd; /* Warna teks yang lebih terang */
+        }
+    /* ini akhir home dan  particles-js */ 
+
+
+    /* ini awal about */
+
+
+    
+    .container1 {
+        background-color: rgb(168, 168, 168);
+            position: relative;
+            z-index: 2;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 70px;
+            padding: 20px;
+            width: 100vw;
+            height: 500px;
+            display: flex;
+            flex-direction: column; /* Mengatur arah konten secara vertikal */
+            align-items: center; /* Memusatkan konten secara horizontal */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Memusatkan kontainer */
+        }
+
+        
+            .profile-image {
+            width: 150px; /* Ukuran gambar */
+            height: 150px; /* Ukuran gambar */
+            border-radius: 50%; /* Membuat gambar bulat */
+            object-fit: cover; /* Memastikan gambar tidak terdistorsi */
+            margin-bottom: 15px; /* Jarak antara gambar dan judul */
+        
+
+        }
+
+        .a {
+            margin: 15px 0 10px;
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        .b {
+            text-align: center;
+            color: #666;
+            font-size: 1em;
+        }
+/* ini akhir about  */
+/* ini awal certifikat  */
+.container2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    width: 500px;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+}
+
+.card-title {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.card-description {
+    padding: 0 15px 15px;
+    color: #555;
+}
+
+/* Responsif */
+@media (max-width: 600px) {
+    .card {
+        width: 90%;
+    }
+}
+/* ini akhir certifikat */
+/* awal fortofolio*/
+
+/* 
+.container3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-fortofolios {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    width: 500px; *//* Ukuran card */
+    /* text-align: center;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.card-fortofolios:hover {
+    transform: scale(1.05);
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+}
+
+.card-title {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.card-description {
+    padding: 0 15px 15px;
+    color: #555;
+}  */
+
+/* Responsif */
+/* @media (max-width: 600px) {
+    .card {
+        width: 90%; Lebar card 90% pada layar kecil
+    }
+}
+
+ */
+/* ini akhir fortofolio */
+/* ini awal contact */
+.contact-container {
+    margin-left: 30px; /* Margin kiri 30px */
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 500pxpx; /* Lebar maksimum form */
+    height: 600px;
+}
+
+
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contact-form button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3; /* Warna saat hover */
+}
+/* ini bagian akhir contact */ 
+    </style>
+</head>
+<body>
+<!-- ini bagian navbar  -->
+    <nav class="navbar">
+        <div class="brand">melvin</div>
+        <div class="hamburger" id="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#certifikat">certificates</a></li>
+            <li><a href="#fortofolios">fortofolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+  <!-- ini akhir navbar -->
+   <!-- ini bagian home -->
+    <div id="home" class="container">
+        <div id="particles-js"></div>
+        <h1>"Selamat datang! Temukan pengalaman terbaik di sini."</h1>
+        <h1>melvin zainul bahtiaar</h1>
+        <p>Saya adalah seorang web developer yang memiliki passion dalam menciptakan website yang menarik dan fungsional. Saya berpengalaman dalam berbagai teknologi web dan selalu berusaha untuk belajar dan berkembang.</p>
+    </div>
+ <!-- ini akhir home -->
+  <!-- ini bagian about-->
+    <div id="about" class="container1">
+        <img src="saya.jpeg" alt="Gambar Profil" class="profile-image">
+        <h1 class="a">melvin zainul bahtiar</h1>
+        <p class="b">Saya adalah seorang web developer dengan passion dalam menciptakan website yang menarik dan fungsional. Saya berpengalaman dalam berbagai teknologi web dan selalu berusaha untuk belajar dan berkembang.</p>
+    </div>
+<!-- ini akhir  about -->
+ <!-- ini bagian certificates -->
+    <h1 style="text-align: center;">certifikat</h1>
+    <div class="container2">
+
+        <div class="card">
+            <img src="Sertifikat saya.jpg" alt="Sertifikat 2" class="card-image">
+            <h2 class="card-title">sertifikat webinar</h2>
+            <p class="card-description">mengghadirkan webinar dari indibot</p>
+        </div>
+        <div class="card">
+            <img src="Sertifikat saya.jpg" alt="Sertifikat 2" class="card-image">
+            <h2 class="card-title">sertifikat webinar</h2>
+            <p class="card-description">mengghadirkan webinar dari indibot</p>
+        </div>
+
+    </div>
+    <!-- ini akhir certificates -->
+     <!-- ini awal fortofolios --> 
+      <div class="container2">
+      <div class="card">
+       
+            <img src="Sertifikat saya.jpg" alt="Proyek 1" class="card-image">
+            <h2 class="card-title">belum ada </h2>
+            <p class="card-description">masih dalam proses</p>
+      
+        </div>
+
+        <!-- Tambahkan lebih banyak card sesuai kebutuhan -->
+    </div>
+    
+    <!-- ini akhir fortofolios -->
+     <!-- ini awal contact  -->
+     <div class="contact-container">
+        <h1>Kontak Kami</h1>
+        <form class="contact-form">
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required>
+
+            <label for="address">Alamat:</label>
+            <textarea id="address" name="address" placeholder="Masukkan alamat Anda" required></textarea>
+
+            <button type="submit">Kirim</button>
+        </form>
+    </div>
+    <!-- ini bagian akhir contact -->
+    <script> 
+
+    //ini bagian navbar
+        const hamburger = document.getElementById("hamburger");
+        const navLinks = document.getElementById("nav-links");
+        
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("active"); // Toggle class active untuk nav-links
+        });
+
+    //akhir navbar
+
+    //ini bagian particles.js
+
+    particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 100,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    },
+                    "image": {
+                        "src": "img/github.svg",
+                        "width": 100,
+                        "height": 100
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 6,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 400,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true 
+        });
+     
+    </script>
+
+</body>
+</html>

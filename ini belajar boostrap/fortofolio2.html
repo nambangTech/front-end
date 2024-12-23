@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Saya</title>
+    <link rel="icon" href="melcin.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <style>
+        :root {
+            --warna-utama-ke-2: #faf8f8;
+            --bg-color: #393e46;
+            --second-bg-color: #323232;
+        }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background: #333;
+    color: white;
+
+}
+/*ini bagian navbar*/
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed; /* Menjadikan navbar tetap di atas saat menggulir */
+    width: 100%; /* Membuat navbar memenuhi lebar layar */
+    top: 0; /* Menempatkan navbar di bagian atas */
+    z-index: 3; 
+    background: var(--second-bg-color);
+    opacity: 1;
+
+    left: 0; 
+ 
+
+}
+.hamburger {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background: #c51616;
+        /* Sesuaikan dengan tinggi navbar */
+        
+         top: 0px;
+        width: 100%;
+        z-index: 4;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+.logo {
+    font-size: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff6347; /* Warna saat hover */
+}
+/* #home{
+    background-color: #333;
+    margin: 0px;
+} */
+
+/* section {
+    padding: 20px;
+    margin: 10px;
+} */
+
+h1, h2 {
+    background: var(--second-bg-color);
+    text-align: center;
+}
+    /* /* .background {
+    position: absolute; /* Mengatur posisi */
+/* 
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color);/* Warna latar belakang dengan transparansi */
+    /* z-index: -1; /* Memastikan berada di belakang konten */
+
+ 
+.skills {
+
+      background: #fff;
+      padding-top: 70px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+    .skills h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .skills ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .skills li {
+      margin: 10px 0;
+      background: #e4e4e7;
+      padding: 10px;
+      border-radius: 5px;
+      color: #333;
+    }
+
+.profile-photo {
+    width: 150px;
+    border-radius: 50%;
+    display: block;
+    margin: 20px auto;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.portfolio-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+img{
+    width: 100;
+    height: 100px;
+}
+
+.card {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 20px;
+    flex: 1 1 calc(30% - 20px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Efek zoom saat hover */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form label {
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #ff6347; /* Warna saat hover */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+#particles-js {
+    width: 100%;
+    height: 100vh; /* Mengatur tinggi partikel agar memenuhi layar */
+    position: absolute; /* Memastikan partikel berada di atas */
+    top: 0;
+    left: 0;
+    z-index: 2; /* Pastikan partikel berada di belakang konten */
+}
+
+
+    
+/* #home{
+        padding-top: 100px;
+        width: 100vw;
+        height: 230px;
+        background-color: var(--bg-color);
+ 
+    }
+    .home,h1{
+        text-align: center;
+        color: #ccc;
+    }
+    .home,p{
+     text-align: center;
+     color: #ddd;
+    }
+     */
+    #about {
+    width: 100vwpx;
+    padding: 20px; /* Menambah padding di sekitar section */
+    margin-top: 20px; /* Menambah jarak dari section sebelumnya */
+    position: relative; /* Pastikan ini diatur untuk menghindari masalah posisi */
+    z-index: 2; /* Pastikan berada di atas partikel */
+    background-color: var(--bg-color);
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">melvin</div>
+            <div class="hamburger" id="hamburger">&#9776;</div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#certificates">Sertifikat</a>
+                <a href="#portfolio">Portofolio</a>
+                <a href="#contact">Contact</a>
+            </div>
+         
+        </nav>
+    </header>
+
+    <section class="Home" id="home">
+        <div id="particles-js"></div>
+        <h1>Selamat Datang di Portofolio Saya</h1>
+        <p>my name is <span id="name">melvin zainul bahtiar</span></p>
+    </section>
+
+    <section id="about">
+       
+        <img src="saya.jpeg" alt="Foto Saya" class="profile-photo">
+        <h2>melvin zainul bahtiar</h2>
+        <p>saya seorang web developer, yang di bidang full stack web development</p>
+    </section>
+ 
+    <section id="skills">
+        <div class="background"></div>
+        <div class="skills">
+            
+            <h2>Skills</h2>
+            <ul>
+              <li><strong>Front-End:</strong> HTML5, CSS3, JavaScript, Bootstrap</li>
+              <li><strong>Back-End:</strong> Python, Django, Flask, RESTful API</li>
+              <li><strong>Database:</strong> MySQL, PostgreSQL, MongoDB</li>
+              <li><strong>Tools:</strong> Git, GitHub, Heroku, Vercel</li>
+              <li><strong>Others:</strong> Problem-solving, Debugging</li>
+            </ul>
+      
+        </div>
+    </section>
+
+
+    <section id="certificates">
+        <h2>Sertifikat</h2>
+       
+        <div class="card">P 1</div>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <h2>Portofolio</h2>
+        <div class="portfolio-cards">
+            <div class="card">Proyek 1</div>
+            <div class="card">Proyek 2</div>
+            <div class="card">Proyek 3</div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Kontak Saya</h2>
+        <form>
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Pesan:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Kirim</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 melvin. Semua hak dilindungi.</p>
+    </footer>
+
+    
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+ 
+
+        particlesJS("particles-js", {
+  particles: {
+    number: {
+      value: 100, // Jumlah partikel
+      density: {
+        enable: true,
+        value_area: 800
+      }
+    },
+    color: {
+      value: "#ffffff" // Warna partikel
+    },
+    shape: {
+      type: "circle", // Bentuk partikel
+    },
+    opacity: {
+      value: 0.5,
+      random: true,
+      anim: {
+        enable: true,
+        speed: 1,
+        opacity_min: 0.1,
+        sync: false
+      }
+    },
+    size: {
+      value: 3,
+      random: true,
+      anim: {
+        enable: false
+      }
+    },
+    line_linked: {
+      enable: true,
+      distance: 150,
+      color: "#ffffff",
+      opacity: 0.4,
+      width: 1
+    },
+    move: {
+      enable: true,
+      speed: 2,
+      direction: "none",
+      random: false,
+      straight: false,
+      out_mode: "out",
+      bounce: false
+    }
+  },
+  interactivity: {
+    detect_on: "canvas",
+    events: {
+      onhover: {
+        enable: true,
+        mode: "repulse"
+      },
+      onclick: {
+        enable: true,
+        mode: "push"
+      }
+    }
+  },
+  retina_detect: true
+});
+
+    </script>
+
+</body>
+</html>
